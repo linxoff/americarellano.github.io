@@ -1,0 +1,187 @@
+/* css/estilos.css */
+
+.sidebar {
+    position: fixed; /* Mantiene la barra fija aunque hagas scroll */
+    top: 0;
+    left: 0;
+    width: 190px; /* Ancho de la barra lateral */
+    height: 100vh; /* Altura completa de la pantalla */
+    background: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+    backdrop-filter: blur(12px); /* Efecto cristal / Glassmorphism */
+    border-right: 2px solid rgba(255, 255, 255, 0.6); /* Borde brillante a la derecha */
+    box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+    padding-top: 30px;
+    z-index: 1000; /* Asegura que la barra siempre esté por encima de otros elementos */
+}
+
+.menu {
+    display: flex;
+    flex-direction: column; /* Apila los enlaces de arriba hacia abajo */
+}
+
+.menu-titulo {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    color: #03004d;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.832);
+}
+
+.menu a {
+    text-decoration: none;
+    color: #1a365d;
+    font-weight: bold;
+    padding: 12px 20px;
+    margin: 5px 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid transparent;
+    transition: all 0.3s ease; /* Animación suave */
+}
+
+.menu a:hover {
+    background: rgba(156, 198, 219, 0.756); /* Verde claro al pasar el mouse */
+    color: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateX(5px); /* Pequeño movimiento hacia la derecha al pasar el mouse */
+}
+
+/* --- AJUSTE PARA EL RESTO DE LA PÁGINA --- */
+/* Empujamos el contenido principal para que la sidebar no lo oculte */
+header {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(8px);
+    border-bottom: 2px solid rgba(129, 151, 199, 0.5);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-left: 190px; 
+}
+
+main {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    padding: 30px;
+    
+    /* Quitamos el ancho de 80% y los márgenes automáticos, 
+       y los definimos manualmente */
+    width: auto; 
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 40px; /* Da un respiro del lado derecho de la pantalla */
+    margin-left: 280px; /* 240px de la barra + 40px de espacio extra */
+}
+
+footer {
+    background: rgba(0, 50, 77, 0.577);
+    backdrop-filter: blur(5px);
+    font-size: 4px;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    /* Empujamos el footer a la derecha del menú */
+    margin-left: 190px;
+}
+/* Selectores de etiqueta */
+body {
+    font-family: 'Outfit', sans-serif;
+    /* Colocamos la imagen de fondo */
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-position: center;
+    background-attachment: fixed; /* La imagen se queda fija al hacer scroll */
+    color: rgb(26, 61, 93);
+    margin: 0;
+    padding: 0;
+}
+
+#pg-inicio{
+    background-image: url(img/lines.jpg);
+}
+
+#pg-perfil {
+    background-image: url(img/IMG_7236.JPG.jpeg);
+}
+
+#pg-contacto {
+    background-image: url(img/IMG_7232.JPG.jpeg);
+}
+
+#pg-formacion {
+    background-image: url(img/molar_00000.png);
+}
+
+#pg-proyectos {
+    background-image: url(img/IMG_7234.JPG.jpeg);
+}
+
+#pg-habilidades {
+    background-image: url(img/IMG_7235.JPG.jpeg);
+}
+
+
+/* Fuente futurista/Y2K solo para los títulos y el menú */
+h1, h2, h3, nav a {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px; /* Separar un poco las letras le da un toque más aesthetic */
+}
+
+/* Si quieres que tu nombre en el inicio resalte con un brillo (opcional) */
+h1 {
+    text-shadow: 0 0 10px rgba(97, 165, 201, 0.8);
+}
+
+p {
+    font-size: 18px;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(178, 186, 223, 0.5);
+}
+
+
+/* Selectores de clase */
+.tarjeta {
+    padding: 20px;
+    margin: 15px 0;
+    border: 1px solid #595f9b;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #ffffff8f 0%, #c1e4fc 100%);
+
+    display: flex;
+    align-items: center; /* Centra verticalmente el texto y la imagen */
+    justify-content: space-between; /* Pone espacio entre el texto y la imagen */
+    gap: 20px; /* Un margen interior entre los dos elementos */
+}
+
+/* Evitamos que el texto ocupe el 100% del espacio */
+.contenido-texto {
+    flex: 1; /* Permite que el texto tome el espacio sobrante */
+}
+
+/* Controlamos el tamaño de la imagen */
+.imagen-lateral {
+    width: 400px; /* Ajusta este valor según qué tan grande quieras la imagen */
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados para que combine con la tarjeta */
+}
+
+.imagen-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    border: 3px solid #4d83b6;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+
